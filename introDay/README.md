@@ -18,16 +18,30 @@ to bundle your application
 
 Commands
 
-npm install - first command that should be done so that the project can work
+First command that should be done so that the project can work
+
+```
+npm install
+```
+
+To run our dev server, run
+
+```
+npm start
+```
+
+(to stop server running, type in console ctrl + c)
+
+For installing packages that we will use in future (according to necessity)(axios, eslint, sass, etc.)
+
+````
+npm install [package-name]
 
 ```
 
-npm start - commands that starts our dev server (to stop server running, type in console ctrl + c)
+To check your code by the rules you set in .eslintrc file, run
 
 ```
-
-npm install [package-name] - command for installing packages that we will use in future (according to necessity)(axios, eslint, sass, etc.)
-
+npm run lint
 ```
-npm run lint - command for checking your code by the rules we set in .eslintrc file
-```
+````
