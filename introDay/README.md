@@ -32,14 +32,14 @@ npm start
 
 (to stop server running, type in console ctrl + c)
 
-For installing packages that we will use in future (according to necessity)(axios, eslint, sass, etc.)
-
-```
-npm install [package-name]
-```
-
 To check your code by the rules you set in .eslintrc file, run
 
 ```
 npm run lint
+```
+
+For installing packages that we will use in future (according to necessity)(axios, eslint, sass, etc.)
+
+```
+npm install [package-name]
 ```
