@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(123, 153, 114);
+}
+
+.header {
+    background-image: url("../images/marko.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: center; */
+}

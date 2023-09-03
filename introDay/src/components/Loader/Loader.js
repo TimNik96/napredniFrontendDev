@@ -21,7 +21,7 @@ export const displayPercentage = (percentage) => {
     percentage.textContent = `${number + 1}%`
     return setTimeout(() => {
         displayPercentage(percentage)
-    }, 100)
+    }, 48)
 }
 
 export default Loader
