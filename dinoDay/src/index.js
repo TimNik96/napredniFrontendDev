@@ -1,9 +1,16 @@
 import { Form } from "./components/Form/Form.js"
+import { Select } from "./components/Select/Select.js"
+import dinoArray from "./dinosData.js"
 
-// eslint-disable-next-line no-unused-vars
-import css from "../asset/css/styles.css"
+import "../asset/css/styles.css"
 
 const app = document.querySelector("#app")
-const forma = Form()
+const header = document.querySelector(".header")
 
-app.appendChild(forma)
+const select = Select(dinoArray)
+header.appendChild(select)
+
+const forma = Form()
+header.appendChild(forma)
+
+// DISPLAY COMPONENT

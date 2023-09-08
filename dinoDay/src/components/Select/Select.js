@@ -1,4 +1,11 @@
 export const Select = (array) => {
+    const divSelect = document.createElement("div")
+    divSelect.classList.add("column")
+    divSelect.classList.add("select")
+
+    const label = document.createElement("label")
+    label.textContent = "Dinosaurus: "
+
     const select = document.createElement("select")
 
     const defaultInput = document.createElement("option")
@@ -15,5 +22,7 @@ export const Select = (array) => {
         select.appendChild(option)
     })
 
-    return select
+    divSelect.append(label, select)
+
+    return divSelect
 }

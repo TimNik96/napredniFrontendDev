@@ -1,13 +1,18 @@
-import { Select } from "../Select/Select"
-import dinoArray from "../../dinosData"
+import dinoArray from "../../dinosData.js"
 
 export const Form = () => {
+    const arr = []
+
+    if (localStorage.getItem("nizPorudzbina") != null) {
+        arr = [...JSON.parse(localStorage.getItem("nizPorudzbina"))]
+    }
+
     const divContainer = document.createElement("div")
-    divContainer.classList.add("header")
 
     const form = document.createElement("form")
 
     const divKupac = document.createElement("div")
+    divKupac.classList.add("column")
 
     const labelKupac = document.createElement("label")
     labelKupac.setAttribute("for", "kupac")
@@ -20,9 +25,8 @@ export const Form = () => {
 
     divKupac.append(labelKupac, inputKupac)
 
-    const select = Select(dinoArray)
-
     const divNapomena = document.createElement("div")
+    divNapomena.classList.add("column")
 
     const labelNapomena = document.createElement("label")
     labelNapomena.textContent = "Napomena: "
@@ -39,7 +43,37 @@ export const Form = () => {
     const inputSubmit = document.createElement("input")
     inputSubmit.type = "submit"
 
-    form.append(divKupac, select, divNapomena, inputSubmit)
+    form.append(divKupac, divNapomena, inputSubmit)
+
+    const selectValue = document.querySelector("select")
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault()
+
+        if (inputKupac.value.trim() === "") {
+            alert("Popunite polje kupac")
+            return
+        }
+
+        if (selectValue.value === "default") {
+            alert("Izaberite dinosaurusa")
+            return
+        }
+
+        const porudzbina = {
+            kupac: inputKupac.value,
+            dinosaurus: selectValue.value,
+            napomena: napomena.value === "" ? "/" : napomena.value,
+            cena: dinoArray.find(
+                (el) => el.name.toLowerCase() === selectValue.value
+            ).cena,
+        }
+
+        arr.push(porudzbina)
+        localStorage.setItem("nizPorudzbina", arr)
+
+        // DISPLAY ORDERS
+    })
 
     divContainer.appendChild(form)
 

@@ -7,9 +7,54 @@ body {
     background-color: rgb(123, 153, 114);
 }
 
+#app {
+    width: 60%;
+    margin: auto;
+    color: white;
+}
+
 .header {
     background-image: url("../images/marko.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
-    /* background-position: center; */
+    display: flex;
+    flex-direction: column;
+}
+
+form {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.select {
+    padding: 2rem 2rem 0 2rem;
+}
+
+.highlight {
+    color: green;
+}
+
+[type="text"],
+select,
+textarea {
+    width: 40%;
+}
+
+[type="submit"] {
+    margin: 1rem 0;
+    padding: 0.5rem 1rem;
+    margin-left: 5rem;
+    color: white;
+    background-color: green;
+    border: none;
+    width: fit-content;
+    cursor: pointer;
 }
