@@ -1,0 +1,7 @@
+{
+    "singleQuote": false,
+    "useEditorConfig": false,
+    "semi": false,
+    "trailingComma": "es5",
+    "tabWidth": 4
+}
