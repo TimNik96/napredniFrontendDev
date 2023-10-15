@@ -7,3 +7,5 @@ export const getAllCountries = () => {
 export const getSingleCountry = (name) => {
     return axiosInstance.get(`/name/${name}`)
 }
+
+// https://restcountries.com/v3.1/region/{region}

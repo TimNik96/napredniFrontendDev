@@ -1,4 +1,4 @@
-const Loader = () => {
+export const Loader = () => {
     const divProgressBar = document.createElement("div")
     divProgressBar.classList.add("progress-bar")
 
@@ -24,4 +24,3 @@ export const displayPercentage = (percentage) => {
     }, 48)
 }
 
-export default Loader
