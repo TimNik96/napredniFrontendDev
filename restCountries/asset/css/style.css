@@ -39,3 +39,57 @@
     display: flex;
     justify-content: space-between;
 }
+
+.errorMessage {
+    width: 100%;
+    font-size: 1.8rem;
+    text-align: center;
+}
+
+.loader {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    column-gap: 1rem;
+}
+
+.dot {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    animation-name: dotMovement;
+    animation-duration: 1.2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+}
+
+.d2 {
+    animation-delay: 0.15s;
+}
+
+.d3 {
+    animation-delay: 0.3s;
+}
+
+.d4 {
+    animation-delay: 0.45s;
+}
+
+.d5 {
+    animation-delay: 0.6s;
+}
+
+@keyframes dotMovement {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(70px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}

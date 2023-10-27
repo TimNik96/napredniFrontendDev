@@ -1,25 +1,24 @@
-import { getAllCountries } from "../../../service"
 import RenderCountries from "../../RenderCountries"
 
-const Search = () => {
+const Search = (data) => {
     const inputSearch = document.createElement("input")
     inputSearch.type = "text"
     inputSearch.placeholder = "Search for a country..."
 
     inputSearch.addEventListener("keyup", async (event) => {
         if (event.key === "Enter") {
-            try {
-                const response = await getAllCountries()
+            // try {
+            const result = data.filter((item) =>
+                item.name.common
+                    .toLowerCase()
+                    .includes(event.target.value.toLowerCase())
+            )
 
-                const result = response.data.filter((item) =>
-                    item.name.common.includes(event.target.value)
-                )
-
-                RenderCountries(result)
-            } catch (error) {
-                //eslint-disable-next-line no-console
-                console.log(error)
-            }
+            RenderCountries(result)
+            // } catch (error) {
+            //     //eslint-disable-next-line no-console
+            //     console.log(error)
+            // }
         }
     })
 

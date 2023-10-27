@@ -2,6 +2,14 @@ const RenderCountries = (countries) => {
     const main = document.querySelector(".country-selection")
     main.textContent = ""
 
+    if (countries.length == 0) {
+        const pError = document.createElement("p")
+        pError.classList.add("errorMessage")
+        pError.textContent = "No match found"
+        main.appendChild(pError)
+        return
+    }
+
     countries.forEach((item) => {
         const divCountry = document.createElement("div")
         divCountry.classList.add("country")
