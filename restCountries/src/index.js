@@ -4,6 +4,7 @@ import Search from "./components/Filters/Search"
 import RegionSelect from "./components/Filters/RegionSelect"
 import { extractRegions } from "./helper/regions"
 import Loader from "./components/Loader"
+import Header from "./components/Header"
 
 import "../asset/css/style.css"
 
@@ -23,9 +24,8 @@ const fetchAllCountries = async () => {
         setTimeout(async () => {
             const response = await getAllCountries()
             renderFilters(response.data)
-            // eslint-disable-next-line no-console
-            console.log(response)
-
+            // // eslint-disable-next-line no-console
+            // console.log(response)
             RenderCountries(response.data)
         }, 2000)
     } catch (error) {
@@ -58,5 +58,6 @@ const fetchAllCountries = async () => {
 //         console.log(error)
 //     })
 
+Header()
 fetchAllCountries()
 // fetchSingleCountry("serbia")

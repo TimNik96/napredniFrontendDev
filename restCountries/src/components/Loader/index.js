@@ -5,9 +5,9 @@ const Loader = () => {
     for (let i = 1; i <= 5; i++) {
         const divDot = document.createElement("div")
         divDot.classList.add("dot")
+        loaderContainer.appendChild(divDot)
         if (i == 1) continue
         divDot.classList.add(`d${i}`)
-        loaderContainer.appendChild(divDot)
     }
 
     return loaderContainer

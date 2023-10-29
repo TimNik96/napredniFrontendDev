@@ -22,7 +22,8 @@ const RegionSelect = (regions) => {
                 RenderCountries(response.data)
             })
             .catch((error) => {
-                //error
+                //eslint-disable-next-line no-console
+                console.log(error)
             })
     })
 
