@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {
+                width: 60%;
+                margin: auto;
+            }
+
+            .hero {
+                position: relative;
+            }
+
+            img {
+                width: fit-content;
+                height: 100%;
+                position: absolute;
+                z-index: -1;
+            }
+
+            .clip-section {
+                clip-path: polygon(
+                    0 0,
+                    0 20%,
+                    2% 20%,
+                    2% 80%,
+                    0 80%,
+                    0 100%,
+                    100% 100%,
+                    100% 0
+                );
+                background-color: black;
+                color: white;
+                width: 30%;
+                height: 60vh;
+                padding: 0 3rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                row-gap: 2rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="hero">
+            <img
+                src="HD-wallpaper-forrest-and-mountains-snow-sky-mountains-forrest.jpg"
+                alt=""
+            />
+            <div class="clip-section">
+                <h1>Hello World</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Expedita quisquam nemo, unde laborum doloribus ipsa
+                    quibusdam reiciendis. Quos debitis doloribus eum incidunt
+                    quam totam esse blanditiis maxime ad nemo accusantium, aut
+                    magnam suscipit tempore ipsa sit perferendis animi iure
+                    facere minus ex eos, expedita aliquid a!
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
