@@ -46,3 +46,55 @@
 // function excludeVAT(price) {
 //     return price * 0.85
 // }
+
+// const niz = [1, 10, 12, 2, 202, 14]
+
+// const minNum = (arr) => {
+//     return arr.sort((a, b) => a - b)[0]
+// }
+
+// const minimum = (arr) => {
+//     const min = arr[0]
+//     arr.forEach((el) => {
+//         if (el < min) min = el
+//     })
+//     return min
+// }
+
+// console.log(minimum(niz))
+
+const hex = "0xfa872b"
+console.log(Number(hex))
+
+// const hexToDecimal = (number) => {
+//     const operableString = number.substring(2)
+//     let convertedNumber = 0
+//     let stepen = 0
+
+//     for (let i = operableString.length - 1; i >= 0; i--) {
+//         if (operableString.charAt(i) === "a")
+//             convertedNumber += 10 * Math.pow(16, stepen)
+//         else if (operableString.charAt(i) === "b")
+//             convertedNumber += 11 * Math.pow(16, stepen)
+//         else if (operableString.charAt(i) === "c")
+//             convertedNumber += 12 * Math.pow(16, stepen)
+//         else if (operableString.charAt(i) === "d")
+//             convertedNumber += 13 * Math.pow(16, stepen)
+//         else if (operableString.charAt(i) === "e")
+//             convertedNumber += 14 * Math.pow(16, stepen)
+//         else if (operableString.charAt(i) === "f")
+//             convertedNumber += 15 * Math.pow(16, stepen)
+//         else convertedNumber += +operableString[i] * Math.pow(16, stepen)
+//         stepen++
+//     }
+
+//     return convertedNumber
+// }
+
+// console.log(hexToDecimal(hex))
+
+const arr = [1, 2, 3]
+
+const randElement = (arr) => {
+    return arr[Math.floor(Math.random() * arr.length)]
+}

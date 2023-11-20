@@ -14,7 +14,7 @@ const Header = () => {
 
     header.append(appName, darkMode)
 
-    darkMode.addEventListener("click", (event) => {
+    darkMode.addEventListener("click", () => {
         isDarkMode = !isDarkMode
         if (isDarkMode) {
             darkMode.classList.add("darkMode")
